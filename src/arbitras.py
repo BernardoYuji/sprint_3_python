@@ -1,21 +1,22 @@
-# Função que recebe a quantidade e nome das arbitras presente no evento
-
-
+# Função para receber árbitras
 def receber_arbitras():
-    quantidade = int(input("Digite o número de Árbitras"))
+    quantidade = int(input("Digite o número de árbitras: "))
     arbitras = []
     for i in range(quantidade):
-        nome = input(f"Digite o nome da {i+1} arbitra: ")
+        nome = input(f"Digite o nome da {i+1} árbitra: ")
         arbitras.append(nome)
     return arbitras
 
-# Função que anuncia as arbitras 
-
+# Função que retorna a lista formatada das árbitras
 def anuncia_arbitras(lista_arbitras):
-    print("\nAs árbitras são: ")
-    for nome in lista_arbitras:
-        print(f"- {nome}")
+    # Retorna uma lista de strings formatadas
+    return [f"- {nome}" for nome in lista_arbitras]
 
-# Chama as funções
+# Chamada das funções
 lista = receber_arbitras()
-anuncia_arbitras(lista)
+resultado = anuncia_arbitras(lista)
+
+# Se quiser imprimir, você pode fazer:
+print("\nAs árbitras são:")
+for linha in resultado:
+    print(linha)

@@ -2,13 +2,16 @@
 def receber_organizadoras():
     return ["Passa a Bola"]  # única organizadora
 
-# Função que anuncia as organizadoras
+# Função que retorna a lista formatada das organizadoras
 def anuncia_organizadoras(lista_organizadoras):
-    print("\nA organizadora do evento é: ")
-    for nome in lista_organizadoras:
-        print(f"- {nome}")
-
+    linhas = ["\nA organizadora do evento é:"]
+    linhas += [f"- {nome}" for nome in lista_organizadoras]
+    return linhas
 
 # Chama as funções
 lista = receber_organizadoras()
-anuncia_organizadoras(lista)
+linhas = anuncia_organizadoras(lista)
+
+# Exibição opcional
+for linha in linhas:
+    print(linha)
