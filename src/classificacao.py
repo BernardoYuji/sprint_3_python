@@ -1,3 +1,5 @@
+# Esse programa so será utilizado após o cadastro dos times terem sido realizados.
+
 # Import de dicionarios
 from cadastro import times, criar_time
 
